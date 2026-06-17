@@ -6,75 +6,75 @@
 
 <br />
 
-LiteX Mobile adalah portal berita modern yang menampilkan desain UI premium, interaksi yang halus, dan performa tinggi. Aplikasi ini mengambil data langsung dari WordPress API (`litex.co.id`) secara real-time.
+LiteX Mobile is a modern news portal featuring a premium UI design, smooth interactions, and high performance. This application fetches data directly from the WordPress API (`litex.co.id`) in real-time.
 
-## Fitur Utama
+## Key Features
 
-- **Premium UI/UX:** Desain pixel-perfect, layout modern bergaya cards, dengan interaksi yang mulus.
-- **Dark Mode Support:** Mendukung mode terang dan gelap yang dapat diatur via Pengaturan.
-- **Berita Real-Time:** Integrasi langsung dengan WordPress REST API (`litex.co.id/wp-json/wp/v2`).
-- **Kategori & Pencarian:** Filter berdasarkan kategori berita atau cari berita spesifik.
-- **Bookmark (Tersimpan):** Simpan artikel favorit untuk dibaca kembali.
-- **Optimasi Performa:** Rendering FlatList yang sangat efisien dengan mekanisme infinite scroll dan pemuatan ukuran gambar yang hemat kuota.
+- **Premium UI/UX:** Pixel-perfect design, modern card-style layout, with seamless interactions.
+- **Dark Mode Support:** Supports light and dark modes configurable via Settings.
+- **Real-Time News:** Direct integration with the WordPress REST API (`litex.co.id/wp-json/wp/v2`).
+- **Categories & Search:** Filter by news category or search for specific articles.
+- **Bookmarks (Saved):** Save favorite articles to read later.
+- **Performance Optimization:** Highly efficient FlatList rendering with infinite scroll mechanisms and data-saving image loading.
 
-## Teknologi yang Digunakan
+## Technologies Used
 
-Aplikasi ini dibangun menggunakan arsitektur frontend mobile yang modern:
-- **[React Native](https://reactnative.dev/) & [Expo](https://expo.dev/)** - Framework pengembangan mobile.
-- **[TanStack React Query](https://tanstack.com/query/latest)** - Pengelolaan antrean data (caching, fetching, dan infinite scroll) dari server.
-- **[Zustand](https://github.com/pmndrs/zustand)** - Manajemen state (untuk fitur Dark Mode & penyimpanan Bookmark lokal).
-- **[React Navigation](https://reactnavigation.org/)** - Sistem pergerakan (routing) antar layar dan navigasi Tab Bawah.
-- **[Axios](https://axios-http.com/)** - Klien HTTP untuk fetching REST API WordPress.
+This application is built using modern mobile frontend architecture:
+- **[React Native](https://reactnative.dev/) & [Expo](https://expo.dev/)** - Mobile development framework.
+- **[TanStack React Query](https://tanstack.com/query/latest)** - Data queue management (caching, fetching, and infinite scroll) from the server.
+- **[Zustand](https://github.com/pmndrs/zustand)** - State management (for Dark Mode features & local Bookmark storage).
+- **[React Navigation](https://reactnavigation.org/)** - Movement system (routing) between screens and Bottom Tab navigation.
+- **[Axios](https://axios-http.com/)** - HTTP client for fetching the WordPress REST API.
 
-## Panduan Memulai (Instalasi Lokal)
+## Getting Started (Local Installation)
 
-Ikuti langkah-langkah di bawah ini untuk menjalankan kode sumber (source code) LiteX Mobile di komputer Anda untuk keperluan pengembangan.
+Follow the steps below to run the LiteX Mobile source code on your computer for development purposes.
 
-### Persyaratan
-- [Node.js](https://nodejs.org/en/) (Disarankan versi LTS, v18 atau v20+)
+### Prerequisites
+- [Node.js](https://nodejs.org/en/) (LTS version recommended, v18 or v20+)
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-### Langkah Instalasi
+### Installation Steps
 
-1. **Kloning Repositori**
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/putraAlifSyah/LiteXMobile.git
    cd LiteXMobile
    ```
 
-2. **Instal Dependensi**
+2. **Install Dependencies**
    ```bash
    npm install
    ```
 
-3. **Jalankan Server Development Expo**
+3. **Start the Expo Development Server**
    ```bash
    npx expo start
    ```
 
-4. **Buka di Perangkat Anda**
-   - **Android:** Unduh aplikasi **Expo Go** dari Google Play Store, lalu pindai QR Code yang muncul di terminal menggunakan pemindai bawaan Expo.
-   - **iOS:** Unduh aplikasi **Expo Go** dari App Store, lalu pindai QR Code menggunakan aplikasi Kamera iPhone Anda.
-   - Atau tekan `a` di terminal untuk membuka di Android Emulator, dan `i` untuk iOS Simulator.
+4. **Open on Your Device**
+   - **Android:** Download the **Expo Go** app from the Google Play Store, then scan the QR Code that appears in the terminal using the built-in Expo scanner.
+   - **iOS:** Download the **Expo Go** app from the App Store, then scan the QR Code using your iPhone's Camera app.
+   - Or press `a` in the terminal to open in the Android Emulator, and `i` for the iOS Simulator.
 
-## Panduan Build (Membuat APK)
+## Build Guide (Creating an APK)
 
-Aplikasi ini telah dikonfigurasikan agar mudah di-build menjadi file installable menggunakan **EAS (Expo Application Services)**.
+This application has been configured to be easily built into an installable file using **EAS (Expo Application Services)**.
 
-1. Instal EAS CLI:
+1. Install EAS CLI:
    ```bash
    npm install -g eas-cli
    ```
-2. Build file `.apk` (Android) untuk diujicoba secara langsung:
+2. Build the `.apk` file (Android) for direct testing:
    ```bash
    eas build -p android --profile preview
    ```
-3. Build file `.aab` (Android App Bundle) untuk diunggah ke Google Play Store:
+3. Build the `.aab` file (Android App Bundle) to upload to the Google Play Store:
    ```bash
    eas build -p android --profile production
    ```
 
-Tunggu hingga proses di cloud selesai, lalu unduh dan instal aplikasinya!
+Wait for the cloud process to finish, then download and install the application!
 
-## Lisensi
-Hak cipta 2026 LiteX. All rights reserved.
+## License
+Copyright 2026 LiteX. All rights reserved.
